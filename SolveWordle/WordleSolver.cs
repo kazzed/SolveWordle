@@ -52,7 +52,7 @@ namespace SolveWordle
 
                 AttemptResults attemptResults = secondAttemptResults;
 
-                while (WordAttemptCounter < 7)
+                while (WordAttemptCounter < 6)
                 {
                     attemptResults = AttemptToSolve(wordToSolve, attemptResults);
 
