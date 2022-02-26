@@ -1,0 +1,16 @@
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\bin\Debug\net5.0\SolveWordle.exe
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\bin\Debug\net5.0\SolveWordle.deps.json
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\bin\Debug\net5.0\SolveWordle.runtimeconfig.json
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\bin\Debug\net5.0\SolveWordle.runtimeconfig.dev.json
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\bin\Debug\net5.0\SolveWordle.dll
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\bin\Debug\net5.0\ref\SolveWordle.dll
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\bin\Debug\net5.0\SolveWordle.pdb
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\obj\Debug\net5.0\SolveWordle.csprojAssemblyReference.cache
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\obj\Debug\net5.0\SolveWordle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\obj\Debug\net5.0\SolveWordle.AssemblyInfoInputs.cache
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\obj\Debug\net5.0\SolveWordle.AssemblyInfo.cs
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\obj\Debug\net5.0\SolveWordle.csproj.CoreCompileInputs.cache
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\obj\Debug\net5.0\SolveWordle.dll
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\obj\Debug\net5.0\ref\SolveWordle.dll
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\obj\Debug\net5.0\SolveWordle.pdb
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle\obj\Debug\net5.0\SolveWordle.genruntimeconfig.cache

@@ -1,0 +1,103 @@
+---
+title: "DictionaryAnalysisMkDwn"
+output: html_document
+date: '2022-02-21'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r setupwork}
+setwd("C:\\Users\\micha\\OneDrive\\Documents\\WordleProject")
+
+library(dplyr)
+library(stringr)
+```
+
+```{r readdata}
+wordlist <- read.csv("dictionarywheaderCSV.csv")
+numberOfWords <- nrow(wordlist)
+```
+
+```{r letterlist}
+letters <- c("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
+```
+
+```{r sumletters}
+#For each letter, how many words contain at least one occurrence of that letter?
+
+letterbyword <- data.frame(Letter=character(),
+                           Count=integer(),
+                           stringsAsFactors = FALSE)
+
+for(index in 1:length(letters)) {
+  lettercount <- sum(grepl(letters[index],wordlist$Words))
+  
+  dfrow <- data.frame(letters[index], lettercount)
+  names(dfrow)=c("Letter", "LetterCount")
+  letterbyword=rbind(letterbyword,dfrow)
+}
+
+```
+
+```{r wordsuniquelettersonly}
+#Create score for each word: the sum of the occurrences of each letter in the word
+
+uniquewords <- data.frame(Word=character(),
+                          UniqueLetters=integer(),
+                          Score=integer(),
+                          stringsAsFactors = FALSE)
+
+
+for (wordlistindex in 1:nrow(wordlist)) {
+  letterscore <- 0
+  uniquecount <- sum(!!str_count(wordlist$Words[wordlistindex], letters))
+  wordcharacters <- str_split_fixed(wordlist$Words[wordlistindex], "", Inf)
+  wordcharacters <- as.data.frame(t(wordcharacters))
+  names(wordcharacters) <- c("LetterInWord")
+ for(characterindex in 1:nrow(wordcharacters)) {
+   letterAndCountRow <- letterbyword %>% filter(letterbyword$Letter == wordcharacters$LetterInWord[characterindex])
+   letterscore <- letterscore + letterAndCountRow$LetterCount
+ }
+  dfrow <- data.frame(wordlist$Words[wordlistindex], uniquecount, letterscore)
+  names(dfrow) <- c("Word", "UniqueLetters", "Score")
+  uniquewords <- rbind(uniquewords,dfrow)
+}
+
+
+```
+
+```{r uniquewordsandletters}
+#Maximize first/seed word potential: only use words where each letter is used only once.
+
+uniquewordsandletters <- uniquewords %>% filter(uniquewords$UniqueLetters == 5)
+uniquewordsandletters <- uniquewordsandletters %>% arrange(desc(uniquewordsandletters$Score))
+```
+
+```{r savecsv1}
+
+write.csv(uniquewords, "wordsandscores.csv")
+```
+
+```{r savecsv2}
+
+write.csv(uniquewordsandletters, "uniquewordsandletters.csv")
+```
+
+```{r not_arose}
+#Get word for second seed: does not contain letters A R O S E
+
+wordsandscores <- read.csv("wordsandscores.csv")
+pattern <- "[^AROSE][^AROSE][^AROSE][^AROSE][^AROSE]"
+notarose <- wordsandscores %>% 
+  filter(grepl(pattern, Word)) %>% 
+  filter(UniqueLetters == 5) %>% 
+  arrange(desc(Score))
+```
+
+
+
+```{r scratch}
+```
+

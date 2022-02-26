@@ -1,0 +1,5 @@
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle.exe
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle.dll
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle.deps.json
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle.runtimeconfig.json
+C:\Users\micha\OneDrive\Documents\WordleProject\Wordle.NET\SolveWordle\SolveWordle.pdb
